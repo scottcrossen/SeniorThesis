@@ -1,0 +1,4 @@
+\contentsline {chapter}{Table of Contents}{iii}{section*.1}
+\contentsline {chapter}{\numberline {1}A Sample Chapter}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}A Fascinating Section}{1}{section.1.1}
+\contentsline {chapter}{Appendix \numberline {A}Appendix Title}{3}{Appendix.a.A}
