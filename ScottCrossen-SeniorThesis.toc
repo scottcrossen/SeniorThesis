@@ -1,4 +1,6 @@
 \contentsline {chapter}{Table of Contents}{iii}{section*.1}
-\contentsline {chapter}{\numberline {1}A Sample Chapter}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}A Fascinating Section}{1}{section.1.1}
-\contentsline {chapter}{Appendix \numberline {A}Appendix Title}{3}{Appendix.a.A}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Qualitative Description}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}A Sample Chapter}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}A Fascinating Section}{3}{section.2.1}
+\contentsline {chapter}{Appendix \numberline {A}Appendix Title}{5}{Appendix.a.A}

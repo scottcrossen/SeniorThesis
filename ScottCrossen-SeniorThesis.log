@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.1.25)  25 JAN 2017 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.1.25)  30 JAN 2017 12:24
 entering extended mode
-**./Template.tex
-(Template.tex
+**./ScottCrossen-SeniorThesis.tex
+(ScottCrossen-SeniorThesis.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 (BYUPhys.cls
@@ -32,10 +32,10 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 \@indexfile=\write3
-\openout3 = `Template.idx'.
+\openout3 = `ScottCrossen-SeniorThesis.idx'.
 
 
-Writing index file Template.idx
+Writing index file ScottCrossen-SeniorThesis.idx
 ("C:\Program Files\MiKTeX 2.9\tex/latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -455,8 +455,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 ))
-(Template.aux)
-\openout1 = `Template.aux'.
+(ScottCrossen-SeniorThesis.aux)
+\openout1 = `ScottCrossen-SeniorThesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
@@ -472,7 +472,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 41.
- ("C:\Program Files\MiKTeX 2.9\tex/latex\base\ts1cmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex/latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 41.
@@ -523,9 +524,9 @@ LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
 LaTeX Info: Redefining \nameref on input line 41.
 
-(Template.out) (Template.out)
+(ScottCrossen-SeniorThesis.out) (ScottCrossen-SeniorThesis.out)
 \@outlinefile=\write5
-\openout5 = `Template.out'.
+\openout5 = `ScottCrossen-SeniorThesis.out'.
 
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 48.
 
@@ -576,15 +577,15 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
- (Template.toc
+
+(ScottCrossen-SeniorThesis.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 )
 \tf@toc=\write6
-\openout6 = `Template.toc'.
+\openout6 = `ScottCrossen-SeniorThesis.toc'.
 
-
-[3
+ [3
 
 
 
@@ -593,28 +594,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 60.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 65.
-("C:\Program Files\MiKTeX 2.9\tex/latex\base\t1cmtt.fd"
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-
-Package natbib Warning: Citation `Jackson1998' on page 1 undefined on input lin
-e 71.
-
-
-Package natbib Warning: Citation `Peatross2000' on page 1 undefined on input li
-ne 72.
-
-
-Package natbib Warning: Citation `intel' on page 1 undefined on input line 72.
-
-<Graphic1.pdf, id=49, 297.11pt x 111.41624pt>
-File: Graphic1.pdf Graphic file (type pdf)
- <use Graphic1.pdf>
-Package pdftex.def Info: Graphic1.pdf used on input line 81.
-(pdftex.def)             Requested size: 297.10927pt x 111.41597pt.
- [1
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 62.
+[1
 
 
 
@@ -626,41 +607,77 @@ Package Fancyhdr Warning: \headheight is too small (14.45377pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./Graphic1.pdf>]
+[2]
+Chapter 2.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 84.
+("C:\Program Files\MiKTeX 2.9\tex/latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+
+Package natbib Warning: Citation `Jackson1998' on page 3 undefined on input lin
+e 90.
+
+
+Package natbib Warning: Citation `Peatross2000' on page 3 undefined on input li
+ne 91.
+
+
+Package natbib Warning: Citation `intel' on page 3 undefined on input line 91.
+
+<Graphic1.pdf, id=59, 297.11pt x 111.41624pt>
+File: Graphic1.pdf Graphic file (type pdf)
+ <use Graphic1.pdf>
+Package pdftex.def Info: Graphic1.pdf used on input line 100.
+(pdftex.def)             Requested size: 297.10927pt x 111.41597pt.
+ [3
+
+] [4 <./Graphic1.pdf>]
 Appendix A.
-[3
+[5
 
 ]
-No file Template.bbl.
-No file Template.ind.
+No file ScottCrossen-SeniorThesis.bbl.
+No file ScottCrossen-SeniorThesis.ind.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
-(Template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
-Package rerunfilecheck Info: File `Template.out' has not changed.
-(rerunfilecheck)             Checksum: 7481FAE9A2658EA7A32293C279050304;339.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
+(ScottCrossen-SeniorThesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
+
+
+Package rerunfilecheck Warning: File `ScottCrossen-SeniorThesis.out' has change
+d.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ScottCrossen-SeniorThesis.out':
+(rerunfilecheck)             Before: 7481FAE9A2658EA7A32293C279050304;339
+(rerunfilecheck)             After:  8DCB5A8B91F59A692B23E14DE70CA4D2;463.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 8716 strings out of 493634
- 127689 string characters out of 3143741
- 211561 words of memory out of 3000000
- 11968 multiletter control sequences out of 15000+200000
- 33078 words of font info for 50 fonts, out of 3000000 for 9000
+ 8724 strings out of 493634
+ 128038 string characters out of 3143741
+ 213561 words of memory out of 3000000
+ 11970 multiletter control sequences out of 15000+200000
+ 35926 words of font info for 52 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,11n,45p,266b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\slxn4
-2\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk><C:/P
+ 43i,11n,45p,1280b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\slxn42\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ectt1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/urw/times/utmr8a.pfb>
-Output written on Template.pdf (6 pages, 63464 bytes).
+1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on ScottCrossen-SeniorThesis.pdf (8 pages, 80861 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
  54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
