@@ -1,5 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: ScottCrossen-SeniorThesis.aux
 The style file: apj.bst
-I found no \citation commands---while reading file ScottCrossen-SeniorThesis.aux
 Database file #1: references.bib
+I was expecting a `,' or a `}'---line 33 of file references.bib
+ : 
+ : @article{RefWorks:doc:58929128e4b0228a292928a7,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "test"
 (There was 1 error message)
