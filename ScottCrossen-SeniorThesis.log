@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.1.25)  1 FEB 2017 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.1.25)  1 FEB 2017 20:29
 entering extended mode
-**P:/SeniorThesis/ScottCrossen-SeniorThesis.tex
-(P:/SeniorThesis/ScottCrossen-SeniorThesis.tex
+**./ScottCrossen-SeniorThesis.tex
+(ScottCrossen-SeniorThesis.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 (BYUPhys.cls
@@ -674,102 +674,6 @@ Package pdftex.def Info: Graphic1.pdf used on input line 173.
 
 ] [12]
 Appendix B.
-
-Package natbib Warning: Citation `RefWorks:doc:58929816e4b0499fa95c51a6' on pag
-e 13 undefined on input line 184.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589299f4e4b0d4c09201f915' on pag
-e 13 undefined on input line 186.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929128e4b0228a292928a7' on pag
-e 13 undefined on input line 187.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589299fbe4b0dec22aee3bd8' on pag
-e 13 undefined on input line 188.
-
-
-Package natbib Warning: Citation `RefWorks:doc:5892912ae4b0dec22aee3993' on pag
-e 13 undefined on input line 189.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929128e4b0499fa95c5064' on pag
-e 13 undefined on input line 190.
-
-
-Package natbib Warning: Citation `RefWorks:doc:5892989ee4b0499fa95c51c8' on pag
-e 13 undefined on input line 191.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589293f5e4b0dec22aee39de' on pag
-e 13 undefined on input line 192.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589295fce4b0d4c09201f6b4' on pag
-e 13 undefined on input line 193.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929a02e4b0d4c09201f91b' on pag
-e 13 undefined on input line 194.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589295bde4b0d4c09201f692' on pag
-e 13 undefined on input line 195.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929264e4b0d4c09201f63b' on pag
-e 13 undefined on input line 196.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929129e4b0d4c09201f61e' on pag
-e 13 undefined on input line 197.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929602e4b0d4c09201f6b6' on pag
-e 13 undefined on input line 198.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589296c6e4b0d4c09201f6f5' on pag
-e 13 undefined on input line 199.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929746e4b0dec22aee3a9a' on pag
-e 13 undefined on input line 200.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589297a9e4b0d4c09201f736' on pag
-e 13 undefined on input line 201.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929800e4b0499fa95c51a1' on pag
-e 13 undefined on input line 202.
-
-
-Package natbib Warning: Citation `RefWorks:doc:589299f0e4b0dec22aee3bd6' on pag
-e 13 undefined on input line 203.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929786e4b0228a292929b8' on pag
-e 13 undefined on input line 204.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929612e4b0499fa95c50fa' on pag
-e 13 undefined on input line 205.
-
-
-Package natbib Warning: Citation `RefWorks:doc:5892964ee4b0499fa95c5108' on pag
-e 13 undefined on input line 206.
-
-
-Package natbib Warning: Citation `RefWorks:doc:58929c15e4b0228a29292c58' on pag
-e 13 undefined on input line 207.
-
-
-Package natbib Warning: Citation `RefWorks:doc:5892912ae4b0228a292928aa' on pag
-e 13 undefined on input line 208.
-
 File: Graphic1.pdf Graphic file (type pdf)
 <use Graphic1.pdf>
 Package pdftex.def Info: Graphic1.pdf used on input line 214.
@@ -780,18 +684,20 @@ Package pdftex.def Info: Graphic1.pdf used on input line 214.
 Appendix C.
 [14
 
-] (ScottCrossen-SeniorThesis.bbl) [15
+] (ScottCrossen-SeniorThesis.bbl [15
 
 
 
-]
-No file ScottCrossen-SeniorThesis.ind.
-
-Package natbib Warning: There were undefined citations.
-
+] [16]) [17]
+(ScottCrossen-SeniorThesis.ind)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
-(ScottCrossen-SeniorThesis.aux)
+ (ScottCrossen-SeniorThesis.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
 Package rerunfilecheck Info: File `ScottCrossen-SeniorThesis.out' has not chang
@@ -800,20 +706,20 @@ ed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
  ) 
 Here is how much of TeX's memory you used:
- 8820 strings out of 493634
- 129688 string characters out of 3143741
- 215655 words of memory out of 3000000
- 12016 multiletter control sequences out of 15000+200000
+ 8895 strings out of 493634
+ 133024 string characters out of 3143741
+ 217148 words of memory out of 3000000
+ 12064 multiletter control sequences out of 15000+200000
  35613 words of font info for 51 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,11n,45p,1294b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,11n,45p,1280b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ScottCrossen-SeniorThesis.pdf (19 pages, 107516 bytes).
+Output written on ScottCrossen-SeniorThesis.pdf (21 pages, 128061 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
+ 399 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
  262 words of extra memory for PDF output out of 10000 (max. 10000000)
 
