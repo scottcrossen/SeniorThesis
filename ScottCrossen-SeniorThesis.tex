@@ -53,13 +53,22 @@ Computational Predictions\\and Experimental Results
  % Start regular page counting at page 1
  \mainmatter
 
-% OK. Everything is set up. Type your thesis here.
-\listoffigures 
+ % Include a list of figures
+ \listoffigures 
+
+
+
+
+
+
+
+
 
 
 \chapter{Introduction}
 
 \section{Qualitative Description of ESR and ODMR}
+\label{sec:qualitative}
 
 \textit{Optically Detected Magnetic Resonance} (ODMR) is a particular form of \textit{Electron Paramagnetic Resonance} (EPR) which is more commonly known as \textit{Electron Spin Resonance} (ESR). The latter two of these terms (EPR and ESR) are synonymous; The former (ODMR) is a particular subset of ESR that utilizes a luminescence measuring technique as a means to collect ESR information. In literature, it is common to see both of these terms followed by the designation "spectroscopy" which signifies that they are tools to study properties of matter via electromagnetic radiation. Though the extent of their application has grown over the years, ESR and ODMR are most commonly used to study the spin-properties of electrons and electron-holes trapped in metal lattices. They can be used to study free radicals in organic materials and are also important in studying the local environment of lattice defects through a technique using angular-dependent ODMR. One particular use of ODMR is the study of electron-spin coherence via a technique known as \textit{Electron Spin Echo}. This can be useful when studying what properties and conditions lead to superior state coherence for qubit candidate materials in quantum computing.
 
@@ -117,16 +126,29 @@ The work done for this thesis is based around two different materials. The first
 
 Dr. Sam Carter of the Naval Research Lab provided the samples for the silicon carbide used. In addition, he also presented a series of plots to describe the spin system present in the material. According to the information he provided, the silicon vacancies in silicon carbide form a spin-3/2 system with a metastable doublet state to allow for non-radiative transitions. Another interesting characteristic of this system is that it has a zero-field splitting effect which accounts for a difference of energies without a magnetic field between the spin states +1/2 and +3/2 with -1/2 and -3/2.
 
-In addition to this information provided by Dr. Carter, he also provided preliminary ODMR results performed at a field strength of around 31 mT as well as angular dependent measurements of the resonant relationship between magnetic field strength and microwave frequency.
+In addition to the information provided by Dr. Carter regarding the spin system of SiC, he also provided preliminary ODMR results performed at low field strengths of around 31 mT. The results of his measurements are found in \ref{fig:PrelimODMR} and show the transitions between different spin states which will be more fully developed in \ref{sec:SiCSamples}. Moreover, Carter also provided angular dependent measurements of the resonant relationship between magnetic field strength and microwave frequency. As mentioned in \ref{sec:qualitative}, there exists a unique pairing between the applied magnetic field and the resonant microwave energy transition. For a given magnetic field there will exist different resonant frequencies depending on the spin system in question. In addition, these characteristic frequencies will have associated linewidths that describe what range of frequencies the gaussian distribution is centered around and how wide it is. For the case of a spin-3/2 system as found in 4H-SiC, the relationship is best represented by \ref{fig:MFRelationship} which is a plot produced by Dr. Carter for the samples used in this project.
 
 \begin{figure}
     \caption[Magnetic field and microwave frequency relationship]{\label{fig:MFRelationship}
      This is the figure description.}
  \end{figure}
+ 
+\begin{figure}
+    \caption[Preliminary ODMR data]{\label{fig:PrelimODMR}
+     This is the figure description.}
+\end{figure}
 
 \section{Overview of Thesis}
 
 \section{Explanatory Notes and Background Information}
+
+
+
+
+
+
+
+
 
 \chapter{Computational Model and Theory}
 
@@ -145,9 +167,19 @@ In addition to this information provided by Dr. Carter, he also provided prelimi
 
 \section{Encountered Challenges}
 
+
+
+
+
+
+
+
+
+
 \chapter{Experimental Methods}
 
 \section{Preparation of Silicon Carbide Samples}
+\label{sec:SiCSamples}
 
 \section{Preparation of Cadmium Telluride Samples}
 
@@ -162,6 +194,15 @@ In addition to this information provided by Dr. Carter, he also provided prelimi
 \label{sec:Experiment}
 
 \section{Data processing}
+
+
+
+
+
+
+
+
+
 
 \chapter{Results}
 
@@ -196,6 +237,16 @@ In addition to this information provided by Dr. Carter, he also provided prelimi
 
 \begin{appendices}
 
+
+
+
+
+
+
+
+
+
+
 \chapter{Electron Spin Studies of Electron Irradiated SiC}
 \label{chpt:AppendA}
 
@@ -209,6 +260,16 @@ In addition to this information provided by Dr. Carter, he also provided prelimi
      This is the figure description.}
  \end{figure}
 
+
+
+
+
+
+
+
+
+
+
 \chapter{Optical Studies of Cadmium Telluride}
 \label{chpt:AppendB}
 
@@ -216,6 +277,14 @@ In addition to this information provided by Dr. Carter, he also provided prelimi
     \caption[Photoluminescence of CdTe]{\label{fig:CdTePL}
      This is the figure description..}
  \end{figure}
+
+
+
+
+
+
+
+
 
 \chapter{Electron Spin Coherence of Silicon Vacancies in Proton-Irradiated 4H-SiC}
 \label{chpt:AppendC}
