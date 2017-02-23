@@ -182,15 +182,71 @@ In addition, pertinent git repositories will be hosted online via GitHub for all
 
 \chapter{Computational Model and Theory}
 
-\section{EasySpin Interaction Modeling System}
-
 \section{Mathematical Model and Theory}
 
-\section{Spin Hamiltonians and Defect-State Contributions}
+\section{EasySpin Interaction Modeling System}
+
+The purpose of this thesis is to comprehensively show the intricacies and unique methodologies of both computational and experimental ESR. As for the first of these two, the most common tool used to computationally model ESR is known as \textit{EasySpin}. This package is built as an open library on top of the MATLAB program and serves to add functionality to the already-useful suite of functions that MATLAB already consists of.
+
+\subsection{The EasySpin Struct Definition}
+
+The core utility to the EasySpin package is the struct definition for the spin system. The EasySpin library is built around the idea of a struct to define all necessary components of the system being studied. In fact, most methods in the EasySpin library usually only require a struct of this type as the sole parameter in the function declaration.
+
+The struct represents the spin system and is usually defined by the user to the extent that the system is known. Though there are many optional parameters that can be included in the struct, the most simplest spin system needs to include a '.S' parameter representing either a list or a value for the parity of spin being worked with as well as a '.g' parameter to represent the g-factor of that material in solid-state ESR. The g-factor could be either a list or a value depending on the crystal type being investigated. After these two parameters are defined, the system can then be passed to any other functions for analysis and plotting. Figure \ref{fig:SpinDefinition} shows an example of what this basic definition might look like in MATLAB.
+
+\begin{figure}
+    \caption[Simple Spin System Definition]{\label{fig:SpinDefinition}
+     An example declaration of the basic EasySpin struct used in defining the spin system.}
+ \end{figure}
+
+\subsection{Basic Class Structure}
+
+The term 'class' is used loosely in this context. Unlike most languages, MATLAB (and thus EasySpin) is based on C and thus not really object oriented. However, unlike C, basic class definitions have been added to the program (but which still aren't commonly used). EasySpin uses a series of '.m' files that represent different abstractions of the overall modelling system that may or may not be implemented in the form of classes. For this thesis, we will use the term 'class' to refer to any modular component of the provided EasySpin library.
+
+The most notable classes that are supplied with the library are the core plotting functions for ESR spectrums. These include such jocose names as "garlic" for cw isotropic ESR and "pepper" for solid state cw ESR (which we will use). Table \ref{fig:EasyFuncs} shows the full list of possible plotting functions supplied in the library. Other functions supplied in Easyspin are mostly related to data import/export, data analysis, and system optimizations.
 
 \begin{table}
 \centering
-\caption{Summary of the spin-Hamiltonian parameters for the various defect centers of ZnO nanowires given by J. E. Stehr et al. The spin-parity and diagonalized g-tensor values are given for each defect center. For the non-axial centers, $\varphi$ is the angle between the z and c axis.
+\caption[EasySpin functions]{\label{fig:EasyFuncs} List of possible \textit{EasySpin} plotting functions. '\textit{pepper}' is the main function that will be used in this thesis.}
+\begin{tabular} {@{\extracolsep{8pt}}rl@{}}
+\hline
+\hline
+Function & Description \\
+\hline
+garlic & cw EPR, isotropic and fast motion \\
+chili & cw EPR, slow motion \\
+pepper & cw EPR, solid state \\
+salt & ENDOR, solid state \\
+saffron & pulse EPR/ENDOR, solid state \\
+curry & SQUID magnetometry \\
+blochsteady & Bloch equations, steady-state \\
+pulse & Shaped pulses \\
+esfit & least-squares fitting \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+In addition to the classes supplied in the EasySpin library, I have also built a few of my own for better visualization of spin systems. One such class (which is included in the online repository cited in the introduction) is called "zeeman.m". The purpose of this program is to draw the field splitting of the zeeman interactions in the spin system over increasing magnetic field. Another class I implemented builds on top of this previous one and is called "animate.m". This will draw the zeeman diagram and then animate the plot by drawing the resonant magnetic field differences for given microwave frequency. 
+
+\begin{figure}
+    \caption[Example of spin-hamiltonion fields]{\label{fig:HamFields}
+     This is the figure description.}
+ \end{figure}
+
+
+\section{Spin Hamiltonians and Defect-State Contributions}
+
+\section{Selecting Hamiltonian Arguments}
+
+In addition to experimentally gathering the ESR data via ODMR, This thesis is also concerned with emulating the ESR spectrum via EasySpin. However, in order to do this the Hamiltonian for each material we will study needs to be understood to the best possible extent.
+
+\subsection{ZnO Nanowires}
+One of the works cited in this thesis investigates the resonant properties of zinc oxide nanowires. The author, Stehr, models the ESR spectrum using g-tensor and spin-values given for each defect center. This data is summarized in table \ref{fig:StehrParams}. Stehr uses the \textit{EasySpin} modeling system to show the predicted ESR spectrum resulting from the $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\text{D}^{*}$ defect center contributions. He models each Hamiltonian separately using EasySpin and then combines the results with MATLAB. The figure \ref{fig:NULL} shows the plots that he presented to the journal after this process.
+
+\begin{table}
+\centering
+\caption[Spin Parameters]{\label{fig:StehrParams} Summary of the spin-Hamiltonian parameters for the various defect centers of ZnO nanowires given by J. E. Stehr et al. The spin-parity and diagonalized g-tensor values are given for each defect center. For the non-axial centers, $\varphi$ is the angle between the z and c axis.
  \label{stehr_table}}
 \begin{tabular}{@{\extracolsep{8pt}}llllllll@{}}
 \hline
@@ -210,17 +266,36 @@ $\text{D}^{*}$ & $1/2$ & $1.9595$ & $1.9605$ & & & & $0$\\
 \end{tabular}
 \end{table}
 
+However, one thing Stehr did not include was the line-width parameters and derivations he used when constructing the spin system via EasySpin. As a verification for the process he used, I have included a reconstruction of the same ESR spectrum that was included in his paper. Through comparison I found that the line-width parameters used by Stehr were $1$, $5$, and $2$ mT for 
+$\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\text{D}^{*}$ respectively. Though it unknown as to how he arrived at these values, it is likely that he compared the theoretical model to the experimental data until a reasonable fit was achieved. In figure \ref{NULL} I give the recreation of the spectrum in addition to the code used to generate the spin system that he used.
 
+\subsection{Irradiated 4H-SiC}
 
+[Rough - More] One of the two primary materials studied in this thesis is silicon carbide. In order to compare the theoretical prediction for the ESR spectrum with experimental results we first need to discover what arguments are used in the overall spin Hamiltonian.
 
-\begin{figure}
-    \caption[Example of spin-hamiltonion fields]{\label{fig:HamFields}
-     This is the figure description.}
- \end{figure}
+[Rough - More] SiC is a commonly known to be a spin-3/2 system with two major ESR peaks in its spectrum. The parameter ‘.S’ given for the EasySpin system is then just $3/2$
 
-\section{Selecting Hamiltonian Arguments for Computational Modeling}
+[Rough - More] As mentioned previously, SiC has one major defect of interest: the silicon divacancy in its lattice structure. The g-factor for this defect center is given as ...
 
-\section{Encountered Challenges}
+[Rough - More] The linewidths are relatively narrow for specimens related to SiC.
+
+[Rough - More] One interesting property of this material is that it exhibits a zero-field splitting which divides the $+3/2$ and $+1/2$ from the $-1/2$ and $-3/2$ states even when there is no external magnetic field.
+
+[Rough - More] Though it is not readily apparent, SiC also exhibits hyperfine splitting in its major ESR peaks.
+
+[Rough - more] I have included the pertinent code to represent this system in terms of the aforementioned EasySpin struct definition in figure \ref{NULL}.
+
+\subsection{Thin-Film CdTe}
+
+[Rough - More] The other material of interest studied in this work is CdTe.
+
+[Rough - more] This system exhibits a dominating Cd interstitial defect (I think. I should look that one up) which contributes a spin-1/2 term to the Hamiltonian.
+
+[Rough - more] The crystal structure of CdTe is (I’ll have to look this up) and thus the g-factor included in the Hamiltonian is (again, i have to look this up).
+
+[Rough - more] I have included the pertinent code to represent this system in terms of the aforementioned EasySpin struct definition in figure \ref{NULL}.
+
+%\section{Encountered Challenges}
 
 
 
