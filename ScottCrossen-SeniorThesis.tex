@@ -292,7 +292,7 @@ $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\t
 
 [Rough - More] One of the two primary materials studied in this thesis is silicon carbide. In order to compare the theoretical prediction for the ESR spectrum with experimental results we first need to discover what arguments are used in the overall spin Hamiltonian.
 
-[Rough - More] SiC is a commonly known to be a spin-3/2 system with two major ESR peaks in its spectrum. The parameter ‘.S’ given for the EasySpin system is then just $3/2$
+[Rough - More] SiC is a commonly known to be a spin-3/2 system with two major ESR peaks in its spectrum. The parameter '.S' given for the EasySpin system is then just $3/2$
 
 [Rough - More] As mentioned previously, SiC has one major defect of interest: the silicon divacancy in its lattice structure. The g-factor for this defect center is given as ...
 
@@ -315,7 +315,7 @@ $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\t
 
 [Rough - more] This system exhibits a dominating Cd interstitial defect (I think. I should look that one up) which contributes a spin-1/2 term to the Hamiltonian.
 
-[Rough - more] The crystal structure of CdTe is (I’ll have to look this up) and thus the g-factor included in the Hamiltonian is (again, i have to look this up).
+[Rough - more] The crystal structure of CdTe is (I'll have to look this up) and thus the g-factor included in the Hamiltonian is (again, i have to look this up).
 
 [Rough - more] I have included the pertinent code to represent this system in terms of the aforementioned EasySpin struct definition in figure \ref{fig:CdTeParams}.
 
@@ -339,40 +339,67 @@ $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\t
 
 \section{Preparation of Silicon Carbide Samples}
 \label{sec:SiCSamples}
+
+Three different samples of 4H-SiC were provided to us by our collaborator Dr. Sam Carter of the Naval Research lab. Each sample was prepared with a different irradiation fluence to introduce silicon defects into the lattice. The first sample that we tested was irradiated with 2 MeV protons at a fluence of $10^{14} \text{cm}^{-2}$. The second sample was similarly irradiated with 2 MeV protons but at a fluence of $10^{13} \text{cm}^{-2}$. The final sample was an electron-irradiated sample produced with a fluence of $10^{17} \text{cm}^{-2}$. The different strengths of irradiation in each sample is presumed to change the concentration of vacancy defects formed within the sample. A higher fluence typically produces a higher concentration of defects. Fig \ref{fig:SiCDepth} shows the distribution of defects in a $10^{12} \text{cm}^{-2}$ sample as a function of spatial depth from the sample's normal face. This data was provided to us by our collaborator Sam Carter as part of a "Stopping and Range of Ions in Matter" (SRIM) study to predict the stopping range for the protons inside this particular species of silicon carbide material. From these calculations, Dr. Carter predicted that the stopping distance of the ions would be at about 44 $\mu$m from the sample's surface. However, further photoluminescence studies showed the concentrations to be closer to about 32 $\mu$m rather than 44 $\mu$m. Finally, each sample was cut such that the c-axis of the lattice was eight degrees from the direction normal to the sample face.
+
 \begin{figure}
     \caption[SiC Depth-Dependent Photoluminescence]{\label{fig:SiCDepth}
-     Depth-dependent photoluminescence of the $10^{12}$ $\text{cm}^{−2}$ sample at the V2 wavelength. The large peak at 34 μm indicates the stopping position of the protons. The spatial resolution was 1 μm.}
+     Depth-dependent photoluminescence of the $10^{12}$ $\text{cm}^{−2}$ sample at the V2 wavelength. The large peak at 34 $\mu$m indicates the stopping position of the protons. The spatial resolution was 1 $\mu$m.}
  \end{figure}
-
 
 \section{Preparation of Cadmium Telluride Samples}
 
+Like the silicon carbide, three different varieties of CdTe were prepared for the purpose of our optical study. One was CSS deposited and two were formed using solution deposition CdTe by our collaborator Dr. Mike Scarpulla of the University of Utah. All three samples were produced as a p-type semiconductor and contain vacancy defects in the crystal-lattice formed through a type of arsenic doping that has been predicted to yield superior results over current techniques commonly used.  
+
+All samples were quite old and required special surface preparation upon arrival in our lab. The age-acquired surface recombination velocity was reduced using the procedure discussed in \ref{NULL} right before the measurements were taken.
+
 \section{Experiment Background}
 
+As mentioned earlier, ODMR is a particular type of ESR. The major difference is that ODMR uses a double-resonance technique to collect ESR data. Because of this, samples had to exhibit adequate resonance in their photoluminescence in order for the absorption of the microwave frequencies to be measured by our detectors. Figures \ref{fig:SiCPL} and \ref{fig:CdTePL} show the photoluminescence spectra of SiC and CdTe with the pertinent peaks of interest highlighted.
+
 \begin{figure}
-    \caption[Photoluminence Spectra of Silicon Carbide]{\label{fig:SiCZeeman}
+    \caption[Photoluminence Spectra of Silicon Carbide]{\label{fig:SiCPL}
       Photoluminence plot showing PL strength vs. wavelength in SiC. The peak near 915 nm is the primary peak of interest as it represents the V2 silicon vacancy defect.}
  \end{figure}
  
 \begin{figure}
-    \caption[Photoluminence Spectra of Cadmium Telluride]{\label{fig:SiCZeeman}
+    \caption[Photoluminence Spectra of Cadmium Telluride]{\label{fig:CdTePL}
      Photoluminence plot showing PL strength vs. wavelength of CdTe.}
  \end{figure}
- 
+
+Furthermore, the experiments performed in this thesis were performed in tandem with another study involving electron spin coherence in silicon carbide. Almost all of the equipment used in the spin-studies project was used directly for collecting data for this thesis as well. Because of this, the \ref{sec:Experiment} section only summarizes the more important elements and details only those aspects of the experiment that significantly deviate from previous projects. For a more detailed description of the experiment please reference Jacob Embley's undergraduate senior thesis.
+
+Figure \ref{fig:setup} shows the overall setup used in this experiment. The basic components necessary to collect ODMR data are: A laser to stimulate photoluminescence, a constant magnetic field, and an adjustable microwave generator to transition spins between energy levels. The cryostat is not completely needed but is rather used as a means to keep the sample at a constant temperature for consistency in experiment. These components are described in detail in the next section.
+
+\begin{figure}
+    \caption[Diagram of Experimental Setup for ODMR]{\label{fig:setup}
+     The diagram showing the necessary (labeled) components and arrangement for the ODMR experiment we used.}
+ \end{figure}
+
 \section{Experiment Setup}
 \label{sec:Experiment}
 
-\subsection{Temperature controller and static magnetic field}
+\subsection{Temperature Controller and Static Magnetic Field}
 
-\subsection{Laser and optics}
+A nonmagnetic \textit{CryoIndustries} cryostat was used to maintain constant temperature on the sample throughout the duration of the experiments. A turbopump was used in conjunction with the cryostat to keep the pressure around $10^{-5}$ mbar. A PID \textit{CryoCon} controller was used as the heating element in the chamber. When used in combination with the cryostat, any temperature between 8 K and 300 K could be achieved. Many different temperatures of ODMR were recorded for the samples between these two temperatures.
 
-\subsection{Microwave generation and amplification}
+An external static magnetic field of 0.37 T was applied constantly throughout the experiment. A large iron-core electromagnet was powered using a Magna-Power Electronics TS Series IV power supply. A Lakeshore DSP 750 gaussmeter was used as a PID controller to make fine adjustments to the magnetic field so that it stayed at 0.37 T. Most ESR-type experiments hold microwave frequency constant and sweep magnetic field strength, but for us it was easier to do the other way around. The results show the same thing either way.
 
-\subsection{Software controller interfaces}
+\subsection{Laser and Optics}
 
-\subsection{Microwave variation and data recording}
+In order for photoluminescence to be measured off the sample, a laser must stimulate the sample first. The laser used for the experiment was a 3900 S Ti:Sapph laser tuned to 870 nm and pumped by a 532 nm solid diode laser. The Ti:Sapph was focused to around 50 micrometers and controlled by a Brockton Electro-Optics Corp BEOC laser power controller. The laser was chopped with a NEOS Technology 15210 acousto-optic modulator (AOM) and paired with a stanford research system lock-in amplifier recording filtered light from a photodiode.
 
-\section{Data processing}
+\subsection{Microwave Generation and Amplification}
+
+Microwaves induce transitions between the zeeman energy levels and are the fundamental variable modulated to retrieve ODMR data. The microwaves used for this experiment were produced using an Agilent Technologies E8257D microwave generator set at 10.4855 GHz at 0 dBm. A 20T4G18 traveling wave tube microwave amplifier increase the power of the microwaves up to about 40 dBM and then fed them to a coupling loop placed next to the sample within the cryostat.
+
+\subsection{Software Controller Interfaces and Data Recording}
+
+All experiments were conducted using a LabVIEW suite of programs designed to succinctly gather and record ODMR data. For our experiment, the LabVIEW suite controlled the microwave and laser modulating so that both could be referenced with a lock-in amplifier as necessary. The microwave generator and lock-in amplifier were interfaced using a GPIB addressing bus implemented as a separate class instantiation in the main LabVIEW program. The instrument classes were all designed to run in parallel to the main scanning software for better experiment control. The generic scanner object was built to handle an abstracted object implementing a "scannable" interface and another object implementing a "readable" interface. The scanner was built robustly enough to handle any combination of instrumentation that inherits from these two interfaces. It will give directives to the "scannable" object while also recording data from the "readable" object at the same time. A beta version of the program is linked-to in the introduction of this thesis and represents the ongoing work of myself, Ryan Peterson, Kyle Miller, Phil White, John Colton, and others.
+
+In addition to the main LabVIEW suite of programs used, an additional PID VI was built to run on its own thread. This was used to handle the magnetic field strength incident on our sample and make minor adjustments to the power-supply for the magnet according to measurements read off of the gaussmeter inserted into the field.
+
+The overall program would accept as input a range of microwave frequencies and then record the absorption from the sample representing the ODMR. After this data was recorded, a graphing software known as \textit{Origin} was used to produce plots from the raw data. No other data analysis was needed apart from the straight reproduction of the raw data into readable plots. The concluding chapter shows these results.
 
 
 
@@ -451,11 +478,6 @@ $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\t
 
 \chapter{Optical Studies of Cadmium Telluride}
 \label{chpt:AppendB}
-
-\begin{figure}
-    \caption[Photoluminescence of CdTe]{\label{fig:CdTePL}
-     This is the figure description..}
- \end{figure}
 
 
 
