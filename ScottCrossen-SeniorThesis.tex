@@ -338,21 +338,23 @@ Though it is not readily apparent, SiC also exhibits hyperfine splitting in its 
 
 \chapter{Experimental Methods}
 
-\section{Preparation of Silicon Carbide Samples}
+\section{Sample Preparation}
+
+\subsection{Preparation of Silicon Carbide Samples}
 \label{sec:SiCSamples}
 
-Three different samples of 4H-SiC were provided to us by our collaborator Dr. Sam Carter of the Naval Research lab. Each sample was prepared with a different irradiation fluence to introduce silicon defects into the lattice. The first sample that we tested was irradiated with 2 MeV protons at a fluence of $10^{14} \text{cm}^{-2}$. The second sample was similarly irradiated with 2 MeV protons but at a fluence of $10^{13} \text{cm}^{-2}$. The final sample was an electron-irradiated sample produced with a fluence of $10^{17} \text{cm}^{-2}$. The different strengths of irradiation in each sample is presumed to change the concentration of vacancy defects formed within the sample. A higher fluence typically produces a higher concentration of defects. Fig \ref{fig:SiCDepth} shows the distribution of defects in a $10^{12} \text{cm}^{-2}$ sample as a function of spatial depth from the sample's normal face. This data was provided to us by our collaborator Sam Carter as part of a ``Stopping and Range of Ions in Matter" (SRIM) study to predict the stopping range for the protons inside this particular species of silicon carbide material. From these calculations, Dr. Carter predicted that the stopping distance of the ions would be at about 44 $\mu$m from the sample's surface. However, further photoluminescence studies showed the concentrations to be closer to about 32 $\mu$m rather than 44 $\mu$m. Finally, each sample was cut such that the c-axis of the lattice was eight degrees from the direction normal to the sample face.
+Three different samples of 4H-SiC were provided to us by our collaborator Dr. Sam Carter of the Naval Research lab. Each sample was prepared with a different irradiation fluence to introduce silicon defects into the lattice. The first sample that we tested was irradiated with 2 MeV protons at a fluence of $10^{14} \text{cm}^{-2}$. The second sample was similarly irradiated with 2 MeV protons but at a fluence of $10^{13} \text{cm}^{-2}$. The final sample was an electron-irradiated sample produced with a fluence of $10^{17} \text{cm}^{-2}$. The different strengths of irradiation in each sample is presumed to change the concentration of vacancy defects formed within the sample. A higher fluence typically produces a higher concentration of defects. Fig \ref{fig:SiCDepth} shows the distribution of defects in a $10^{12} \text{cm}^{-2}$ sample as a function of spatial depth from the sample's normal face. This data was provided to us by Dr. Sam Carter as part of a ``Stopping and Range of Ions in Matter" (SRIM) study to predict the stopping range for the protons inside this particular species of silicon carbide material. From these calculations, Dr. Carter predicted that the stopping distance of the ions would be at about 44 $\mu$m from the sample's surface. However, further photoluminescence studies showed the concentrations to be closer to about 32 $\mu$m rather than 44 $\mu$m. Finally, each sample was cut such that the c-axis of the lattice was eight degrees from the direction normal to the sample face.
 
 \begin{figure}
     \caption[SiC Depth-Dependent Photoluminescence]{\label{fig:SiCDepth}
      Depth-dependent photoluminescence of the $10^{12}$ $\text{cm}^{−2}$ sample at the V2 wavelength. The large peak at 34 $\mu$m indicates the stopping position of the protons. The spatial resolution was 1 $\mu$m.}
  \end{figure}
 
-\section{Preparation of Cadmium Telluride Samples}
+\subsection{Preparation of Cadmium Telluride Samples}
 
 Like the silicon carbide, three different varieties of CdTe were prepared for the purpose of our optical study. One was CSS deposited and two were formed using solution deposition CdTe by our collaborator Dr. Mike Scarpulla of the University of Utah. All three samples were produced as a p-type semiconductor and contain vacancy defects in the crystal-lattice formed through a type of arsenic doping that has been predicted to yield superior results over current techniques commonly used.  
 
-All samples were quite old and required special surface preparation upon arrival in our lab. The age-acquired surface recombination velocity was reduced using the procedure discussed in \ref{NULL} right before the measurements were taken.
+All samples were quite old and required special surface preparation upon arrival in our lab. The age-acquired surface recombination velocity was reduced using the procedure discussed in \ref{NULL} right before the measurements were taken. refer to \ref{NULL} for the full description of what procedures were used to prep the sample's surface.
 
 \section{Experiment Background}
 
@@ -368,17 +370,18 @@ As mentioned earlier, ODMR is a particular type of ESR. The major difference is 
      Photoluminence plot showing PL strength vs. wavelength of CdTe.}
  \end{figure}
 
-Furthermore, the experiments performed in this thesis were performed in tandem with another study involving electron spin coherence in silicon carbide. Almost all of the equipment used in the spin-studies project was used directly for collecting data for this thesis as well. Because of this, the \ref{sec:Experiment} section only summarizes the more important elements and details only those aspects of the experiment that significantly deviate from previous projects. For a more detailed description of the experiment please reference Jacob Embley's undergraduate senior thesis.
-
-Figure \ref{fig:setup} shows the overall setup used in this experiment. The basic components necessary to collect ODMR data are: A laser to stimulate photoluminescence, a constant magnetic field, and an adjustable microwave generator to transition spins between energy levels. The cryostat is not completely needed but is rather used as a means to keep the sample at a constant temperature for consistency in experiment. These components are described in detail in the next section.
-
-\begin{figure}
-    \caption[Diagram of Experimental Setup for ODMR]{\label{fig:setup}
-     The diagram showing the necessary (labeled) components and arrangement for the ODMR experiment we used.}
- \end{figure}
+Furthermore, the experiments performed in this thesis were performed in tandem with another study involving electron spin coherence in silicon carbide. The majority of the equipment used in the spin-studies project was used directly for collecting data for this thesis as well. Because of this, section \ref{sec:Experiment} only summarizes the more important elements and details only those aspects of the experiment that significantly deviate from previous projects. For a more detailed description of the experiment please reference Jacob Embley's undergraduate senior thesis.\ref{NULL}
 
 \section{Experiment Setup}
 \label{sec:Experiment}
+
+\begin{figure}
+    \centerline{\includegraphics{setup_fig}}
+    \caption[Diagram of Experimental Setup for ODMR]{\label{fig:setup}
+     The diagram showing the necessary (labeled) components and arrangement for the ODMR experiment. A full description of each element is included in section \ref{sec:Experiment}.}
+ \end{figure}
+
+Figure \ref{fig:setup} shows the overall setup used in this experiment. The basic components necessary to collect ODMR data are: A laser to stimulate photoluminescence, a constant magnetic field, and an adjustable microwave generator to transition spins between energy levels. Though a cryostat was used, it was not needed and was included as just an artifact for previous experiments that used this same setup. For our purposes the cryostat kept the sample at a constant room-temperature for consistency in the experiment. These components are described in detail in the next section.
 
 \subsection{Temperature Controller and Static Magnetic Field}
 
