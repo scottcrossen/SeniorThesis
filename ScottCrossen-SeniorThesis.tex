@@ -196,7 +196,7 @@ Some terms in the Hamiltonian dominate the system and can be focused on individu
      An Example of Spin-Hamiltonian fields in terms of $S$ and $g$}
  \end{figure}
 
-[Rough] Once the Hamiltonian is known for the system, the ESR spectrum can be computationally predicted. A variety of methods are available to go from the basic Hamiltonian components to the finished ESR plot. The most notable is a software suite called \textit{EasySpin}\ref{NULL}, which vastly simplifies the amount of calculations and explicit Hamiltonian definitions that the investigator has to make.
+Once the Hamiltonian is known for the system, the ESR spectrum can be computationally predicted. A variety of methods are available to go from the basic Hamiltonian components to the finished ESR plot. The most notable is a software suite called \textit{EasySpin}\ref{NULL} (that was a link I need to fix), which vastly simplifies the amount of calculations and explicit Hamiltonian definitions that the investigator has to make.
 
 \section{\textit{EasySpin} Interaction Modeling System}
 
@@ -209,8 +209,9 @@ The core utility of the \textit{EasySpin} package is the struct definition used 
 The struct represents the spin system and is usually defined by the user to the extent that the system is known. Though there are many optional parameters that can be included in the struct, the most simplest spin system needs to include a `.S' parameter representing either a list or a value for the parity of spin being worked with as well as a `.g' parameter to represent the g-factor of that material in solid-state ESR. The g-factor could be either a list or a value depending on the crystal type being investigated. After these two parameters are defined, the system can then be passed to any other functions for analysis and plotting. Figure \ref{fig:SpinDefinition} shows an example of what this basic definition might look like in \textsc{matlab}.
 
 \begin{figure}
+    \centerline{\includegraphics{example_params_fig}}
     \caption[Simple Spin System Definition]{\label{fig:SpinDefinition}
-     An example declaration of the basic \textit{EasySpin} struct used in defining the spin system.}
+     An example declaration of the basic \textit{EasySpin} struct used in defining the spin system. In this example, `Sys' represents an arbitrary name for the struct, `.S' is the spin parity, `.g' is the g-factor, `.lw' is the ESR line-width, `.mwFreq' is the position of the microwave frequency being probed, and `.Range' is the range of the magnetic field being scanned.}
  \end{figure}
 
 \subsection{Basic Class Structure}
@@ -250,12 +251,6 @@ In addition to the classes supplied in the \textit{EasySpin} library, I have als
 In addition to experimentally gathering the ESR data via ODMR, this thesis is also concerned with emulating the ESR spectrum via EasySpin. However, in order to do this, the Hamiltonian for each material needs to be understood to the fullest possible extent.
 
 \subsection{ZnO Nanowires}
-One of the works cited in this thesis investigates the resonant properties of zinc oxide nanowires\ref{NULL}. The author, Stehr, models the ESR spectrum using g-tensor and spin-values given for each defect center. This data is summarized in table \ref{fig:StehrParams}. Stehr uses the \textit{EasySpin} modeling system to show the predicted ESR spectrum resulting from the $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\text{D}^{*}$ defect center contributions. He models each Hamiltonian separately using \textit{EasySpin} and then combines the results with \textsc{matlab}. Figure \ref{fig:StehrPlots} shows the plots that he presented to the journal after this process.
-
-\begin{figure}
-    \caption[ESR Spectrum Presented by Stehr et al.]{\label{fig:StehrPlots}
-     The ESR spectrum presented by Stehr et al. for ZnO Nanowires at variable fields and angles.}
- \end{figure}
 
 \begin{table}
 \centering
@@ -278,39 +273,46 @@ $\text{D}^{*}$ & $1/2$ & $1.9595$ & $1.9605$ & & & & $0$\\
 \hline
 \end{tabular}
 \end{table}
+ 
+One of the works cited in this thesis investigates the resonant properties of zinc oxide nanowires\ref{NULL}. The author, Stehr, models the ESR spectrum using g-tensor and spin-values given for each defect center. This data is summarized in table \ref{fig:StehrParams}. Stehr uses the \textit{EasySpin} modeling system to show the predicted ESR spectrum resulting from the $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\text{D}^{*}$ defect center contributions. He models each Hamiltonian separately using \textit{EasySpin} and then combines the results with \textsc{matlab}. Figure \ref{fig:StehrPlots} shows the plots that he presented to the journal after this process.
+
+\begin{figure}
+    \centerline{\includegraphics{stehr_fig}}
+    \caption[ESR Spectrum Presented by Stehr et al.]{\label{fig:StehrPlots}
+     The ESR spectrum presented by Stehr et al. for ZnO Nanowires. The results of computational modeling using \textit{EasySpin} are shown in dashed-red (individual) and solid-red (total). The black line represents actual data from the sample and the blue line is included for comparison to the bulk species.}
+ \end{figure}
 
 However, one thing Stehr did not include was the ESR line-width parameters and derivations he used when constructing the spin system via EasySpin. As a verification for the process he used, I have included a reconstruction of the same ESR spectrum that was included in his publication. Through comparison I found that the line-width parameters used by Stehr were $1$, $5$, and $2$ mT for 
 $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\text{D}^{*}$ respectively. Though it is unknown as to how he arrived at these values, it is likely that he compared the theoretical model to the experimental data until a reasonable fit was achieved. In Figure \ref{fig:StehrRec} I give the recreation of the spectrum and the code used to generate the spin system that Stehr used.
 
+
 \begin{figure}
+    \centerline{\includegraphics{stehr_rec_fig}}
     \caption[Recreation of ZnO Nanowire ESR]{\label{fig:StehrRec}
-     The recreation of the plots given by Stehr et al. for the ZnO nanowire ESR spectrum}
+     The recreation of the plots given by Stehr et al. for the ZnO nanowire ESR spectrum. All three defect centers are included as in the original figure. }
  \end{figure}
 
 \subsection{Irradiated 4H-SiC}
 
-[Rough - More] One of the two primary materials studied in this thesis is silicon carbide. In order to compare the theoretical prediction for the ESR spectrum with experimental results we first need to discover what arguments are used in the overall spin Hamiltonian.
+One of the two primary materials studied in this thesis is silicon carbide. In order to compare the theoretical prediction of the ESR spectrum with experimental results we first need to discover what arguments are used in the overall spin Hamiltonian. Below I have listed the significance and value of each term used in the spin Hamiltonian. I have also included the pertinent code to represent this system in terms of the aforementioned \textit{EasySpin} struct definition in figure \ref{fig:SiCParams}.
 
-[Rough - More] SiC is a commonly known to be a spin-3/2 system with two major ESR peaks in its spectrum. The parameter `.S' given for the \textit{EasySpin} system is then just $3/2$
+SiC is a commonly known to be a spin-3/2 system with two major ESR peaks in its spectrum. The parameter `.S' given for the \textit{EasySpin} system is then just $3/2$. Moreover, as mentioned previously, SiC has one major defect of interest: the silicon divacancy in its lattice structure. The g-factor for this defect center is given as a rhomboidal two-termed g-factor [$\text{g}_{xx}=\text{g}_{yy}$, $\text{g}_{zz}$] of [$2.003$, $2.0045$]. This is listed as the `.g' parameter in the struct definition.
 
-[Rough - More] As mentioned previously, SiC has one major defect of interest: the silicon divacancy in its lattice structure. The g-factor for this defect center is given as ...
+The linewidths are relatively narrow for specimens related to SiC. By comparison to experiment we have found that the full-width-half-maximum value of the line-widths is close to unity. Using \textit{EasySpin} this means that the `.lw' parameter should be set to around $1$
 
-[Rough - More] The linewidths are relatively narrow for specimens related to SiC.
+One interesting property of this material is that it exhibits a zero-field splitting which divides the $+3/2$ and $+1/2$ from the $-1/2$ and $-3/2$ states even when there is no external magnetic field. In our definition we have measured this parameter to be about `.D$=450$' MHz at the zero-field marking.
 
-[Rough - More] One interesting property of this material is that it exhibits a zero-field splitting which divides the $+3/2$ and $+1/2$ from the $-1/2$ and $-3/2$ states even when there is no external magnetic field.
-
-[Rough - More] Though it is not readily apparent, SiC also exhibits hyperfine splitting in its major ESR peaks.
-
-[Rough - more] I have included the pertinent code to represent this system in terms of the aforementioned \textit{EasySpin} struct definition in figure \ref{fig:SiCParams}.
+Though it is not readily apparent, SiC also exhibits hyperfine splitting in its major ESR peaks. To observe this splitting, two terms can be added to the spin-system: `.A' and '.Nucs'. For SiC these two parameters take on the value of `-120` and '29Si' respectively. However, in our example they are insignificant and therefore not included. In Figure \ref{fig:SiCParams} I have commented out these two lines of code to reflect that.
 
 \begin{figure}
+    \centerline{\includegraphics{sic_params_commented_fig}}
     \caption[The \textit{EasySpin} representation of SiC]{\label{fig:SiCParams}
      The representation of the known parameters included in the \textit{EasySpin} struct definition for analysis of 4H-SiC}
  \end{figure}
  
 \subsection{Thin-Film CdTe}
 
-[Rough - More] The other material of interest studied in this work is CdTe.
+[Rough - More] The other material of interest studied in this work is CdTe. (Writer's comment: honestly, I may just take anything related to CdTe out of my thesis. I don't really have that much information on it to produce good plots.)
 
 [Rough - more] This system exhibits a dominating Cd interstitial defect (I think. I should look that one up) which contributes a spin-1/2 term to the Hamiltonian.
 
