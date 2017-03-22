@@ -115,18 +115,19 @@ The work done for this thesis was done in collaboration with two groups of peopl
 The work done for this thesis is based around one primary material. This material, SiC\index{silicon carbide (4H SiC)}, has had prior work done on it for ODMR\index{Optically Detected Magnetic Resonance (ODMR)} characterization.
 
 Dr. Sam Carter of the Naval Research Lab provided the samples for the silicon carbide\index{silicon carbide (4H SiC)} used. In addition, he also presented a series of plots to describe the spin system present in the material. According to the information he provided, the silicon vacancies in silicon carbide\index{silicon carbide (4H SiC)} form a spin-3/2 system with a metastable doublet state to allow for non-radiative transitions. Another interesting characteristic of this system is that it has a zero-field splitting effect which accounts for a difference of energies without a magnetic field between the spin states +1/2 and +3/2 with -1/2 and -3/2.
-
-In addition to the information provided by Dr. Carter regarding the spin system of SiC\index{silicon carbide (4H SiC)}, he also provided preliminary ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results performed at low field strengths of around 31 mT. The results of his measurements are found in \ref{fig:PrelimODMR} and show the transitions between different spin states which will be more fully developed in \ref{sec:SiCSamples}. Moreover, Carter also provided angular dependent measurements of the resonant relationship between magnetic field strength and microwave frequency. As mentioned in \ref{sec:qualitative}, there exists a unique pairing between the applied magnetic field and the resonant microwave energy transition. For a given magnetic field there will exist different resonant frequencies depending on the spin system in question. In addition, these characteristic frequencies will have associated linewidths that describe what range of frequencies the gaussian distribution is centered around and how wide it is. For the case of a spin-3/2 system as found in 4H-SiC\index{silicon carbide (4H SiC)}, the relationship is best represented by \ref{fig:MFRelationship} which is a plot produced by Dr. Carter for the samples used in this project.
-
-\begin{figure}
-    \caption[Magnetic field and microwave frequency relationship]{\label{fig:MFRelationship}
-     The relationship between magnetic field strength and microwave Frequency for 4H-SiC\index{silicon carbide (4H SiC)}, a spin-3/2 system. Resonant conditions are shown via bright coloration on the axes of frequency vs field. Notice the linear dependence between both microwave energy and field strength.}
- \end{figure}
  
 \begin{figure}
-    \centerline{\includegraphics{p14-odmr}}
+    \centerline{\includegraphics{MFRelationship_fig}}
+    \caption[Magnetic field and microwave frequency relationship]{\label{fig:MFRelationship}
+     The relationship between magnetic field strength and microwave Frequency for 4H-SiC\index{silicon carbide (4H SiC)}, a spin-3/2 system. Resonant conditions are shown via bright coloration on the aces of frequency vs field. Notice the linear dependence between both microwave energy and field strength.}
+ \end{figure}
+
+In addition to the information provided by Dr. Carter regarding the spin system of SiC\index{silicon carbide (4H SiC)}, he also provided preliminary ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results performed at low field strengths of around 31 mT. The results of his measurements are found in \ref{fig:PrelimODMR} and show the transitions between different spin states which will be more fully developed in \ref{sec:SiCSamples}. Moreover, Carter also provided angular dependent measurements of the resonant relationship between magnetic field strength and microwave frequency. As mentioned in \ref{sec:qualitative}, there exists a unique pairing between the applied magnetic field and the resonant microwave energy transition. For a given magnetic field there will exist different resonant frequencies depending on the spin system in question. In addition, these characteristic frequencies will have associated linewidths that describe what range of frequencies the gaussian distribution is centered around and how wide it is. For the case of a spin-3/2 system as found in 4H-SiC\index{silicon carbide (4H SiC)}, the relationship is best represented by \ref{fig:MFRelationship} which is a plot produced by Dr. Carter for the samples used in this project.
+ 
+\begin{figure}
+    \centerline{\includegraphics{prelim_odmr_fig}}
     \caption[Preliminary ODMR\index{Optically Detected Magnetic Resonance (ODMR)} data]{\label{fig:PrelimODMR}
-     The preliminary ODMR\index{Optically Detected Magnetic Resonance (ODMR)} data for Proton Irradiated Silicon Carbide in a constant magnetic field of 2.455 Tesla. The plot shows resonant paramagnetic conditions at 10.35 GHz and 10.47 GHz where the absorption is greatest. }
+     The preliminary ODMR\index{Optically Detected Magnetic Resonance (ODMR)} data for Proton Irradiated Silicon Carbide in a constant magnetic field of 28 mT. The plot shows resonant paramagnetic conditions at 718 MHz and 857 MHz where the absorption is greatest. }
 \end{figure}
 
 \subsection{\textit{EasySpin\index{EasySpin}} Computational Modeling System}
@@ -169,11 +170,6 @@ As mentioned in the Introduction, spin systems and Electron Spin Resonance\index
 Thankfully, the general Hamiltonian\index{spin Hamiltonian} for atoms in a magnetic field is commonly known. In this case, the interaction energy of an atom in a constant magnetic field is given by the overall spin Hamiltonian\index{spin Hamiltonian} $\mathcal{H}_{\text{tot}}$: $$\mathcal{H}_{\text{tot}} = \mathcal{H}_{\text{elect}} + \mathcal{H}_{\text{cf}} + \mathcal{H}_{\text{LS}} + \mathcal{H}_{\text{SS}} + \mathcal{H}_{\text{Zee}} + \mathcal{H}_{\text{hfs}} + \mathcal{H}_{\text{Q}} + \mathcal{H}_{\text{N}}$$ where $\mathcal{H}_{\text{elect}}$ is the electronic energy, $\mathcal{H}_{\text{cf}}$ is the crystal field energy, $\mathcal{H}_{\text{LS}} = \lambda L \cdot S$ is the spin-orbit\index{spin Hamiltonian!spin-orbit contribution} interaction, $\mathcal{H}_{\text{SS}} = D \left[ S_{z}^{2} - \frac{1}{3} S (S+1) \right]$ is the spin-spin\index{spin Hamiltonian!spin-spin contribution} interaction, $\mathcal{H}_{\text{Zee}} = \beta H \cdot (L+2S)$ is the Zeeman interaction energy\index{spin Hamiltonian!Zeeman contribution}, $\mathcal{H}_{\text{hfs}} = \left(A_xS_xI_x + A_yS_yI_y + A_zS_zI_z\right)$ is the hyperfine\index{spin Hamiltonian!hyperfine contribution} structure, $\mathcal{H}_{\text{Q}}$ is the quadrupole energy, and $\mathcal{H}_{\text{N}} = \gamma \beta_{N} H \cdot I$ is the nuclear spin energy. All of these components are defined in terms of the spin angular momentum operator $S$, the orbital angular momentum operator $L$, the Nuclear Spin Operator $I$, the Bohr magneton $\beta$, the spin-orbit coupling constant $\lambda$, the hyperfine coupling constant $A$, the nuclear gyromagnetic ratio $\gamma$, and the zero-field splitting constant $D$.
 
 Some terms in the Hamiltonian\index{spin Hamiltonian} dominate the system and can be focused on individually. Though we will not restrict our analysis solely to them, the most important term is the Zeeman\index{spin Hamiltonian!Zeeman contribution} interaction energy. For the high-field limit that we will be working with, the Zeeman\index{spin Hamiltonian!Zeeman contribution} interaction dominates all other perturbations. This effects the system by splitting energy levels linearly with increasing magnetic field. Though there are a few other constants involved in the calculation of the Zeeman\index{spin Hamiltonian!Zeeman contribution} Hamiltonian, the main parameter it requires is the all-important g-tensor. This factor simplifies to a factor for symmetric lattice conditions and it relates the spreading of the differing spin energy levels to the magnetic field. It is ultimately through this Zeeman\index{spin Hamiltonian!Zeeman contribution} effect that we are able to see resonant conditions between magnetic field strength and microwave frequency.
-
-\begin{figure}
-    \caption[Example of spin-hamiltonion fields]{\label{fig:HamFields}
-     An Example of Spin-Hamiltonian\index{spin Hamiltonian} fields in terms of $S$ and $g$}
- \end{figure}
 
 Once the Hamiltonian\index{spin Hamiltonian} is known for the system, the ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectrum can be computationally predicted. A variety of methods are available to go from the basic Hamiltonian\index{spin Hamiltonian} components to the finished ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} plot. The most notable is a software suite called \textit{EasySpin\index{EasySpin}}\ref{NULL} (that was a link I need to fix), which vastly simplifies the amount of calculations and explicit Hamiltonian\index{spin Hamiltonian} definitions that the investigator has to make.
 
@@ -275,6 +271,12 @@ $\text{V}_{\text{Zn}}^{-}$, $\text{V}_{\text{Zn}}/\text{Zn}_{\text{i}}$, and $\t
 
 One of the two primary materials studied in this thesis is silicon carbide\index{silicon carbide (4H SiC)}. In order to compare the theoretical prediction of the ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectrum with experimental results we first need to discover what arguments are used in the overall spin Hamiltonian\index{spin Hamiltonian}. Below I have listed the significance and value of each term used in the spin Hamiltonian\index{spin Hamiltonian}. I have also included the pertinent code to represent this system in terms of the aforementioned \textit{EasySpin\index{EasySpin}} struct definition in figure \ref{fig:SiCParams}.
 
+\begin{figure}
+    \centerline{\includegraphics{energy_levels_fig}}
+    \caption[Energy Levels of 4H-SiC]{\label{fig:MFRelationship}
+     A diagram showing the energy-levels of the spin-3/2 system inherent in 4H-SiC for the high-field limit. Allowed transitions are shown with solid colored arrows. Disallowed transitions are shown with dashed arrows}
+ \end{figure}
+
 SiC\index{silicon carbide (4H SiC)} is a commonly known to be a spin-3/2 system with two major ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} peaks in its spectrum. The parameter `.S' given for the \textit{EasySpin\index{EasySpin}} system is then just $3/2$. Moreover, as mentioned previously, SiC\index{silicon carbide (4H SiC)} has one major defect\index{lattice-defects} of interest: the silicon divacancy in its lattice structure. The g-factor for this defect\index{lattice-defects} center is given as a rhomboidal two-termed g-factor [$\text{g}_{xx}=\text{g}_{yy}$, $\text{g}_{zz}$] of [$2.003$, $2.0045$]. This is listed as the `.g' parameter in the struct definition.
 
 The linewidths are relatively narrow for specimens related to SiC\index{silicon carbide (4H SiC)}. By comparison to experiment we have found that the full-width-half-maximum value of the line-widths is close to unity. Using \textit{EasySpin\index{EasySpin}} this means that the `.lw' parameter should be set to around $1$
@@ -311,10 +313,11 @@ The work done for this thesis uses both computational and experimental component
 Three different samples of 4H-SiC\index{silicon carbide (4H SiC)} were provided to us by our collaborator Dr. Sam Carter of the Naval Research lab. Each sample was prepared with a different irradiation fluence to introduce silicon defects into the lattice. The first sample that we tested was irradiated with 2 MeV protons at a fluence of $10^{14} \text{cm}^{-2}$. The second sample was similarly irradiated with 2 MeV protons but at a fluence of $10^{13} \text{cm}^{-2}$. The final sample was an electron-irradiated sample produced with a fluence of $10^{17} \text{cm}^{-2}$. The different strengths of irradiation in each sample is presumed to change the concentration of vacancy defects formed within the sample.
 
 A higher irradiation fluence typically produces a higher concentration of defects. Figure \ref{fig:SiCDepth} shows the distribution of defects in a $10^{12} \text{cm}^{-2}$ sample as a function of spatial depth from the sample's normal face. This data was provided to us by Dr. Sam Carter as part of a ``Stopping and Range of Ions in Matter" (SRIM) study to predict the stopping range for the protons inside this particular species of silicon carbide\index{silicon carbide (4H SiC)} material. From the SRIM calculations, Dr. Carter predicted that the stopping distance of the ions would be at about 44 $\mu$m from the sample's surface. However, further photoluminescence studies showed the concentrations to be closer to about 32 $\mu$m rather than 44 $\mu$m. Finally, each sample was cut such that the c-axis of the lattice was eight degrees from the direction normal to the sample face.
-
+    
 \begin{figure}
+    \centerline{\includegraphics{srim_fig}}
     \caption[SiC\index{silicon carbide (4H SiC)} Depth-Dependent Photoluminescence]{\label{fig:SiCDepth}
-     Depth-dependent photoluminescence of the $10^{12}$ $\text{cm}^{−2}$ sample at the V2 wavelength. The large peak at 34 $\mu$m indicates the stopping position of the protons. The spatial resolution was 1 $\mu$m.}
+     Depth-dependent photoluminescence of the $10^{12}$ $\text{cm}^{−2}$ sample at at major PL peak. The large peak at 34 $\mu$m indicates the stopping position of the protons. The spatial resolution was 1 $\mu$m.}
  \end{figure}
 
 \subsection{Photoluminescence Data}
@@ -322,6 +325,7 @@ A higher irradiation fluence typically produces a higher concentration of defect
 As mentioned earlier, ODMR\index{Optically Detected Magnetic Resonance (ODMR)} is a particular type of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. The major difference is that ODMR\index{Optically Detected Magnetic Resonance (ODMR)} uses a double-resonance technique to collect ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} data. Because of this, samples had to exhibit adequate resonance in their photoluminescence in order for the absorption of the microwave frequencies to be measured by our detectors. Figure \ref{fig:SiCPL} shows the photoluminescence spectra of SiC\index{silicon carbide (4H SiC)} with the pertinent peaks of interest highlighted.
 
 \begin{figure}
+    \centerline{\includegraphics{sic_pl_fig}}
     \caption[Photoluminence Spectra of Silicon Carbide]{\label{fig:SiCPL}
       Photoluminence plot showing PL strength vs. wavelength in SiC\index{silicon carbide (4H SiC)}. The peak near 915 nm is the primary peak of interest as it represents the V2 silicon vacancy defect\index{lattice-defects}.}
  \end{figure}
@@ -390,6 +394,7 @@ Using computational methods via spin-Hamiltonian analysis with \textit{EasySpin}
 We successfully collected data showing the ODMR\index{Optically Detected Magnetic Resonance (ODMR)} spectra for SiC. This data is shown in figure \ref{fig:SiCResults}. The same trend is seen in this data as is shown in the previous predictions. Namely, there are resonant peaks at something for a field strength of something. Also apparent in this figure is a minor splitting of each peak visible at the very top of each spectral line. This is attributed to higher-order structures resulting from the perturbation of the material's levels.
 
 \begin{figure}
+    \centerline{\includegraphics{p14-odmr}}
     \caption[Experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)} for SiC\index{silicon carbide (4H SiC)}]{\label{fig:SiCResults}
      The experimental ODMR results for 4H-SiC. Like the computational predictions, this plot also shows the the relation between microwave frequency and absorption for a static magnetic field strength.}
  \end{figure}
@@ -404,7 +409,7 @@ Moreover, It is expected (and actually acceptable) that there will be some varia
 
 The primary conclusion of this thesis regards the equivalency between computational and experimental ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. Though there are some differences between the two methods, the results show that computational ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions match experimental results to the same extent that the underlying Hamiltonian for that particular system is understood. In other words: the level of precision that computational modelling can present is restricted by how much information is known about the Hamiltonian\index{spin Hamiltonian} for that given system. Furthermore, there will always be some ambiguity between ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results and predictions due to practical considerations such as noise and ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} line-widths. Overall however, computational methods are good approximations of actual ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} results.
 
-Citations
+
 \cite{RefWorks:doc:58929816e4b0499fa95c51a6}
 \cite{RefWorks:doc:58929629e4b0d4c09201f6b8}
 \cite{RefWorks:doc:589299f4e4b0d4c09201f915}
