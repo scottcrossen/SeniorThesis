@@ -417,19 +417,25 @@ The overall program accepts as input a range of microwave frequencies and then r
 
 \chapter{Results}
 
+This chapter presents the ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectrums for SiC and CdTe for both computational and experimental methods. The results of these two methods are then compared and contrasted and their strengths analyzed.
+
 \section{Computational Predictions}
 
+Using computational methods via spin-Hamiltonian analysis with \textit{EasySpin} we were able to recover the characteristic ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectrum shown in figure \ref{fig:SiCModel}. The figure shows resonant conditions at something for a field strength of Something. Though there are only two major peaks, if we had defined our Hamiltonian further we may have been able to see smaller perturbation effects such as the fine and hyperfine structures.
+
 \begin{figure}
-    \caption[ODMR\index{Optically Detected Magnetic Resonance (ODMR)} computational model for SiC\index{silicon carbide (4H SiC)}]{\label{fig:SiCModel}
+    \caption[ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} computational model for SiC\index{silicon carbide (4H SiC)}]{\label{fig:SiCModel}
      This is the figure description.}
  \end{figure}
 
 \begin{figure}
-    \caption[ODMR\index{Optically Detected Magnetic Resonance (ODMR)} computational model for CdTe\index{cadmium telluride (CdTe)}]{\label{fig:CdTeModel}
+    \caption[ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} computational model for CdTe\index{cadmium telluride (CdTe)}]{\label{fig:CdTeModel}
      This is the figure description.}
  \end{figure}
 
 \section{Experimental Results}
+
+We successfully collected data showing the ODMR\index{Optically Detected Magnetic Resonance (ODMR)} spectra for SiC. This data is shown in figure \ref{fig:SiCResults}. The same trend is seen in this data as is shown in the previous predictions. Namely, there are resonant peaks at something for a field strength of something. Also apparent in this figure is a minor splitting of each peak visible at the very top of each spectral line. This is attributed to higher-order structures resulting from the perturbation of the material's levels.
 
 \begin{figure}
     \caption[Experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)} for SiC\index{silicon carbide (4H SiC)}]{\label{fig:SiCResults}
@@ -444,7 +450,13 @@ The overall program accepts as input a range of microwave frequencies and then r
 
 \section{Data Analysis}
 
+The main expectation of the two different ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} methods is that they will produce spectral peaks at the same resonant microwave/magnetic field pairings. Moreover, it is also expected that the relative heights of each peak is the same when compared between plots. The data presented in the previous sections corroborate this condition. However, there is still is some differences between the two different methods. For one thing, the experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)} shows a higher noise-floor than the computational method. It's easier to predict cleaner spectrums when the only uncertainty is that of machine precision and not environmental effects.
+
+Moreover, It is expected (and actually acceptable) that there will be some variations in the results obtained between the two methods used to recover ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} information from materials. The most notable difference between the two methods is seen in the width of each spectral peak within the plots. This congruence is best explained using time-dependent perturbation theory in quantum mechanics. Theoretically the probability of transition between microwave-levels in the samples should reach a delta-function limit centered at the resonant frequency for that given field strength. However, this only holds for an infinitely-lasting excitation transition. In practice this condition is not feasible and ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} peaks are instead shown to have finite widths in the magnetic-field domain. The width of these peaks is largely determined by how long the transitioning microwave intensity is incident on the sample. In our experiment we used a lock-in amplifier that referenced a modulated microwave intensity that was chopped at 1 kHz. Though the experimental results are easily reproducible given the same component time and power, different investigations may find different values of width depending on what parameters the researchers use. It therefore is not hard to explain why the computational predictions that were obtained for ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} do not always match the experimental results when there is such discrepancy among experimental procedures themselves. For our purposes a spectral line-width was used to best match the experimental results that we obtained. The computational spectral widths should therefore match fairly close to the experimental results.
+
 \section{Conclusion}
+
+The primary conclusion of this thesis regards the equivalency between computational and experimental ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. Though there are some differences between the two methods, the results show that computational ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions match experimental results to the same extent that the underlying Hamiltonian for that particular system is understood. Furthermore, there will always be some ambiguity between ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results and predictions due to practical considerations such as noise and ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} line-widths. Overall however, computational methods are good approximations of actual ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} results.
 
 \begin{appendices}
 
