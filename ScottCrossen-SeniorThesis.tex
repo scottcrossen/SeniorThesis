@@ -18,7 +18,7 @@
   \HonorsRepresentative{Kristine Hansen}
 
 % The text of your abstract
-  \Abstract{ \textit{Electron Spin Resonance}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} (ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}) is an important tool in understanding the quantum-mechanical properties of condensed matter. It's applications range from studying lattice-defect\index{lattice-defects} in solids to studying spin coherence in qubit candidate materials used for quantum computing\index{quantum computing}. When coupled with a photoluminesce measuring component, a double-resonance-technique allows for optical readout of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} information. This unique form of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} is called \textit{Optically Detected Magnetic Resonance\index{Optically Detected Magnetic Resonance (ODMR)}} (ODMR\index{Optically Detected Magnetic Resonance (ODMR)}). In this thesis we compare experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)} data with ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions generated from computational modelling systems. To investigate the differences between these two methods we will study two spin-systems in particular: irradiated 4H silicon carbide\index{silicon carbide (4H SiC)} and thin-film cadmium telluride\index{cadmium telluride (CdTe)}. These two specimens will serve as the primary means to connect experimentally and theoretically the two very different forms of computational and practical ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectroscopy commonly used today. Methods and theory for both methods will be described and resulting spectrums will be overlaid for comparison. Though there will always be some differences, results show that computational ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions match experimental results to the same extent that the underlying Hamiltonian for that particular system is understood. }
+  \Abstract{ \textit{Electron Spin Resonance}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} (ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}) is an important tool in understanding the quantum-mechanical properties of condensed matter. It's applications range from studying lattice-defect\index{lattice-defects} in solids to studying spin coherence in qubit candidate materials used for quantum computing\index{quantum computing}. When coupled with a photoluminesce measuring component, a double-resonance-technique allows for optical readout of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} information. This unique form of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} is called \textit{Optically Detected Magnetic Resonance\index{Optically Detected Magnetic Resonance (ODMR)}} (ODMR\index{Optically Detected Magnetic Resonance (ODMR)}). In this thesis we compare experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)} data with ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions generated from computational modelling systems. To investigate the differences between these two methods we will study one spin-system in particular: irradiated 4H silicon carbide\index{silicon carbide (4H SiC)}. This specimens will serve as the primary means to connect experimentally and theoretically the two very different forms of computational and practical ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectroscopy commonly used today. Methods and theory for both methods will be described and resulting spectrums will be overlaid for comparison. Though there will always be some differences, results show that computational ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions match experimental results to the same extent that the underlying Hamiltonian for that particular system is understood. }
 
  \Keywords{[A comma-separated list of descriptive words for search purposes]}
 
@@ -76,18 +76,6 @@ The Zeeman effect itself is crucial in understanding the principles of ESR\index
      Zeeman effect for a two level system showing spin ( $\pm 1/2$ ) energy levels as a function of applied magnetic field. For arbitrary field strength the energy difference is shown as a function of $\mu$, $g$, and the field strength $B$.}
 \end{figure}
 
-\section{The Defect\index{lattice-defects} Nature of Materials}
-
-[Rough - More] In solid-state physics, materials form crystal lattices for molecular tessellation. These structures are not perfect, however, and often have intrinsic interstitial defects\index{lattice-defects}. These defects\index{lattice-defects} come in the form of either additional or missing atoms. [continued]
-
-[Rough - More] Crystal lattice defects\index{lattice-defects} are important as they contribute to the overall spin system of the material via either electrons or electron-holes.
-
-[Rough - More] Optically Detected Magnetic Resonance\index{Optically Detected Magnetic Resonance (ODMR)} (ODMR\index{Optically Detected Magnetic Resonance (ODMR)}) can be used in conjunction with a varied applied angle (between the magnetic field and c-plane) to study the local nature of each type of defect\index{lattice-defects} in the material.
-
-[Rough - More] ODMR\index{Optically Detected Magnetic Resonance (ODMR)} can give the information necessary in understanding how the lattice is formed.
-
-[Rough - More] Defects\index{lattice-defects} can be introduced via high-fluence irradiation of particles.
-
 \section{Electron Spin, Quantum Computing\index{quantum computing}, and Qubits}
 
 Classical Computation is almost always based upon a binary system. In these architectures, the computer's register, memory, and general logical states are either in a logical `true' or a logical `false' state. A `true' state corresponds to a high voltage and a `false' state corresponds to a grounded voltage. A computer's bits can be in either of these two states - 1 or 0 - but not both.
@@ -100,15 +88,19 @@ Today, there is large emphasis within the scientific community in building viabl
 
 Although more than just spin systems can be used as the all-important qubits for quantum computing\index{quantum computing}, we will focus on this type - specifically spin-1/2 systems formed from electrons - for the basis of our discussion. As mentioned earlier, ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} is the major tool used to study the spin properties of materials. In the case of quantum computation\index{quantum computing}, ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} is used to study possible qubit materials that might eventually be used in such machines. Currently, one of the major difficulties in creating quantum computers\index{quantum computing} is finding materials that can form superposition states that remain coherent (and reliable) over prolonged periods of time. In order to understand what properties of materials lead to superior qubit construction and state coherence, ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} can be used in conjunction with electron spin echo experiments to study the coherence of electrons in a spin-1/2 system. Moreover, ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} can be used alone to study the spin system itself and the local environment of the defects\index{lattice-defects} in materials that form them. Knowledge of this important topic will serve to increase our ability to construct better qubits for use in quantum computers\index{quantum computing}.
 
+\section{The Defect\index{lattice-defects} Nature of Materials}
+
+In solid-state physics, materials form crystal lattices for molecular tessellation. These structures are not perfect, however, and often have intrinsic interstitial defects\index{lattice-defects}. These defects\index{lattice-defects} come in the form of either additional or missing atoms. Crystal lattice defects\index{lattice-defects} as they are called are important as they contribute to the overall spin system of the material via either electrons or electron-holes. For the case of some materials, these defects\index{lattice-defects} can be introduced via high-fluence irradiation of particles.
+
 \section{Previous Work (Our Research Group and Others)}
 
 \subsection{Preliminary Work and Results}
 
 The work performed in this thesis references in large part the work done by Kyle Miller and Jacob Embley - two students who worked under Dr. John Colton and have since graduated from Brigham Young University. Their work was mostly performed on the topic of Electron Spin Coherence in Proton-Irradiated Silicon Carbide and is documented in their senior theses both of related titles. This thesis, however, will not be on the same topic as the former two but will expand on one aspect used by both of these two students in their work - ODMR\index{Optically Detected Magnetic Resonance (ODMR)}. In addition, both Miller and Embley used a particular species of SiC\index{silicon carbide (4H SiC)} which is one of the two principal materials of investigation in this thesis.
 
-Appendix \ref{chpt:AppendC} includes a publication that Embley, Colton, Miller, myself and a few others produced on the topic of spin coherence in proton irradiated silicon carbide\index{silicon carbide (4H SiC)}. It has been accepted by \textit{Physical Review B} and will appear in publication later in the year 2017. This publication serves as a capstone to the work of both Embley and Miller as included in their senior theses and will serve as the context for which this thesis was produced.
+The reference section includes a publication that Embley, Colton, Miller, myself and a few others produced on the topic of spin coherence in proton irradiated silicon carbide\index{silicon carbide (4H SiC)}. It has been accepted by \textit{Physical Review B} and will appear in publication later in the year 2017. This publication serves as a capstone to the work of both Embley and Miller as included in their senior theses and will serve as the context for which this thesis was produced.
 
-In addition to the work done by Miller and Embley, an additional study was performed on a similar material of the SiC\index{silicon carbide (4H SiC)} specimen which is not included in either the aforementioned theses or publication. This project is included in Appendix \ref{chpt:AppendA}. The major difference with Appendix \ref{chpt:AppendA} and the theses produced by Miller and Embley is the fluence of irradiation used on the SiC\index{silicon carbide (4H SiC)} sample in question. Miller's work was primarily concerned with a $10^{14}$ $cm^{-2}$ proton-irradiated sample of SiC\index{silicon carbide (4H SiC)}. Embley likewise worked with a $10^{13}$ $cm^{-2}$ proton-irradiated sample of SiC\index{silicon carbide (4H SiC)}. In Appendix \ref{chpt:AppendA} I work with a $10^{17}$ $cm^{-2}$ electron-irradiated sample of SiC\index{silicon carbide (4H SiC)} in much the same way as used by Embley. With this additional sample, a more comprehensive analysis and additional results are presented.
+In addition to the work done by Miller and Embley, an additional study was performed on a similar material of the SiC\index{silicon carbide (4H SiC)} specimen which is not included in either the aforementioned theses or publication. This project is included in Appendix A. The major difference with Appendix A and the theses produced by Miller and Embley is the fluence of irradiation used on the SiC\index{silicon carbide (4H SiC)} sample in question. Miller's work was primarily concerned with a $10^{14}$ $cm^{-2}$ proton-irradiated sample of SiC\index{silicon carbide (4H SiC)}. Embley likewise worked with a $10^{13}$ $cm^{-2}$ proton-irradiated sample of SiC\index{silicon carbide (4H SiC)}. In Appendix A I work with a $10^{17}$ $cm^{-2}$ electron-irradiated sample of SiC\index{silicon carbide (4H SiC)} in much the same way as used by Embley. With this additional sample, a more comprehensive analysis and additional results are presented.
 
 \subsection{Experimental Setup}
 
@@ -118,13 +110,11 @@ The experimental setup used for the majority of this thesis was set up and teste
 
 The work done for this thesis was done in collaboration with two groups of people. Firstly, the silicon carbide\index{silicon carbide (4H SiC)} samples used were produced and partially characterized by Dr. Sam Carter of the Naval Research Lab. These samples were irradiated with different fluences of particles in order to introduce different concentrations of defects\index{lattice-defects} into the material. It was Carter's work that ultimately led us to obtain such high quality samples for optical characterization and Electron Spin Resonance\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} studies.
 
-The second collaborative group that we worked with was Dr. Mike Scarpulla of the University of Utah. Scarpulla was responsible for providing the second species of material (CdTe\index{cadmium telluride (CdTe)}) that was characterized for this report. Like the SiC\index{silicon carbide (4H SiC)}, this sample was provided with partial characterization and given to us for optical study. Appendix \ref{chpt:AppendB} gives the full report (at least up to the publication date of this thesis) for the optical studies performed on the CdTe\index{cadmium telluride (CdTe)} sample.
-
 \subsection{Preliminary Results of Experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)}}
 
-The work done for this thesis is based around two different materials. The first, SiC\index{silicon carbide (4H SiC)}, has had prior work done on it for ODMR\index{Optically Detected Magnetic Resonance (ODMR)} characterization. The second sample, CdTe\index{cadmium telluride (CdTe)}, was not optically characterized for this work prior to our experimentation and was left to us for detailed analysis.
+The work done for this thesis is based around one primary material. This material, SiC\index{silicon carbide (4H SiC)}, has had prior work done on it for ODMR\index{Optically Detected Magnetic Resonance (ODMR)} characterization.
 
-[Rough] Dr. Sam Carter of the Naval Research Lab provided the samples for the silicon carbide\index{silicon carbide (4H SiC)} used. In addition, he also presented a series of plots to describe the spin system present in the material. According to the information he provided, the silicon vacancies in silicon carbide\index{silicon carbide (4H SiC)} form a spin-3/2 system with a metastable doublet state to allow for non-radiative transitions. Another interesting characteristic of this system is that it has a zero-field splitting effect which accounts for a difference of energies without a magnetic field between the spin states +1/2 and +3/2 with -1/2 and -3/2.
+Dr. Sam Carter of the Naval Research Lab provided the samples for the silicon carbide\index{silicon carbide (4H SiC)} used. In addition, he also presented a series of plots to describe the spin system present in the material. According to the information he provided, the silicon vacancies in silicon carbide\index{silicon carbide (4H SiC)} form a spin-3/2 system with a metastable doublet state to allow for non-radiative transitions. Another interesting characteristic of this system is that it has a zero-field splitting effect which accounts for a difference of energies without a magnetic field between the spin states +1/2 and +3/2 with -1/2 and -3/2.
 
 In addition to the information provided by Dr. Carter regarding the spin system of SiC\index{silicon carbide (4H SiC)}, he also provided preliminary ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results performed at low field strengths of around 31 mT. The results of his measurements are found in \ref{fig:PrelimODMR} and show the transitions between different spin states which will be more fully developed in \ref{sec:SiCSamples}. Moreover, Carter also provided angular dependent measurements of the resonant relationship between magnetic field strength and microwave frequency. As mentioned in \ref{sec:qualitative}, there exists a unique pairing between the applied magnetic field and the resonant microwave energy transition. For a given magnetic field there will exist different resonant frequencies depending on the spin system in question. In addition, these characteristic frequencies will have associated linewidths that describe what range of frequencies the gaussian distribution is centered around and how wide it is. For the case of a spin-3/2 system as found in 4H-SiC\index{silicon carbide (4H SiC)}, the relationship is best represented by \ref{fig:MFRelationship} which is a plot produced by Dr. Carter for the samples used in this project.
 
@@ -147,13 +137,9 @@ In addition to the information provided by Dr. Carter regarding the spin system 
 
 The purpose of this thesis is to describe in detail the methods and procedures behind experimental and theoretical ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} and to answer the question as to how both experimental and theoretical methods compare to each other. By so doing we will also introduce the fundamental theory behind ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} and computational modelling packages such as \textit{EasySpin\index{EasySpin}}. In addition, we will also discuss the experimental frameworks and setups necessary for collecting ODMR\index{Optically Detected Magnetic Resonance (ODMR)} information from materials. This analysis will not be comprehensive but is rather purposed as an introduction into the techniques used in the field. As such, we will restrict our analysis to only solid-state ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} and ODMR\index{Optically Detected Magnetic Resonance (ODMR)}.
 
-In addition, this thesis will analyze what factors and properties inherent in materials contribute to ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} detection and spectroscopy. This analysis will be geared towards understanding the nature of defects\index{lattice-defects} within materials and how these defects\index{lattice-defects} are emergent in ODMR\index{Optically Detected Magnetic Resonance (ODMR)} spectroscopy. As a final note on this topic we will introduce multiple examples of different defect-types\index{lattice-defects} to show resultant ODMR\index{Optically Detected Magnetic Resonance (ODMR)} data.
+We will use one main materials for this thesis: SiC\index{silicon carbide (4H SiC)}. This material will be valuable in our understanding of lattice defect\index{lattice-defects} contribution towards ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results. In addition, we will primarily use this material as a control to compare the experimental data with respective computational predictions. It will be through this specimen that we will ultimately show the similarity between experimental results and theoretical predictions.
 
-We will use two main materials for this thesis: SiC\index{silicon carbide (4H SiC)} and CdTe\index{cadmium telluride (CdTe)}. These materials will be valuable in our understanding of lattice defect\index{lattice-defects} contribution towards ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results. In addition, we will primarily use these as controls to compare the experimental data with respective computational predictions. It will be through these two specimens that we will ultimately show the similarity between experimental results and theoretical predictions.
-
-In the end, this thesis will conclude that computational modelling is accurate to the same degree as the spin system is understood. In other words: the level of precision that computational modelling can present is restricted by how much information is known about the Hamiltonian\index{spin Hamiltonian} for that given system.
-
-As supplementary material, I have included multiple appendixes detailing further expansion projects and studies of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. Though these appendices are not purposed with the same thrust as this thesis, all of them are excellent resources that would serve to broaden the reader's understanding of the applications and use of this important experiment in condensed-matter physics.
+In the end, this thesis will conclude that computational modelling is accurate to the same degree as the spin system is understood. In other words: the level of precision that computational modeling can present is restricted by how much information is known about the Hamiltonian\index{spin Hamiltonian} for that given system.
 
 \section{Explanatory Notes and Background Information}
 
@@ -182,9 +168,7 @@ As mentioned in the Introduction, spin systems and Electron Spin Resonance\index
 
 Thankfully, the general Hamiltonian\index{spin Hamiltonian} for atoms in a magnetic field is commonly known. In this case, the interaction energy of an atom in a constant magnetic field is given by the overall spin Hamiltonian\index{spin Hamiltonian} $\mathcal{H}_{\text{tot}}$: $$\mathcal{H}_{\text{tot}} = \mathcal{H}_{\text{elect}} + \mathcal{H}_{\text{cf}} + \mathcal{H}_{\text{LS}} + \mathcal{H}_{\text{SS}} + \mathcal{H}_{\text{Zee}} + \mathcal{H}_{\text{hfs}} + \mathcal{H}_{\text{Q}} + \mathcal{H}_{\text{N}}$$ where $\mathcal{H}_{\text{elect}}$ is the electronic energy, $\mathcal{H}_{\text{cf}}$ is the crystal field energy, $\mathcal{H}_{\text{LS}} = \lambda L \cdot S$ is the spin-orbit\index{spin Hamiltonian!spin-orbit contribution} interaction, $\mathcal{H}_{\text{SS}} = D \left[ S_{z}^{2} - \frac{1}{3} S (S+1) \right]$ is the spin-spin\index{spin Hamiltonian!spin-spin contribution} interaction, $\mathcal{H}_{\text{Zee}} = \beta H \cdot (L+2S)$ is the Zeeman interaction energy\index{spin Hamiltonian!Zeeman contribution}, $\mathcal{H}_{\text{hfs}} = \left(A_xS_xI_x + A_yS_yI_y + A_zS_zI_z\right)$ is the hyperfine\index{spin Hamiltonian!hyperfine contribution} structure, $\mathcal{H}_{\text{Q}}$ is the quadrupole energy, and $\mathcal{H}_{\text{N}} = \gamma \beta_{N} H \cdot I$ is the nuclear spin energy. All of these components are defined in terms of the spin angular momentum operator $S$, the orbital angular momentum operator $L$, the Nuclear Spin Operator $I$, the Bohr magneton $\beta$, the spin-orbit coupling constant $\lambda$, the hyperfine coupling constant $A$, the nuclear gyromagnetic ratio $\gamma$, and the zero-field splitting constant $D$.
 
-Some terms in the Hamiltonian\index{spin Hamiltonian} dominate the system and can be focused on individually. Though we do not restrict our analysis to them, the most important terms are the Zeeman\index{spin Hamiltonian!Zeeman contribution} interaction energy, the crystalline electric field, the spin-spin interaction energy, and the hyperfine term. We will specifically review all of these terms at some point in this paper.
-
-[Rough - More] I should probably give a more in-depth explanation of the all-important Zeeman\index{spin Hamiltonian!Zeeman contribution} term at this point. During this explanation I'll explain the g-tensor (and its simplifications) and the spin parameter S.
+Some terms in the Hamiltonian\index{spin Hamiltonian} dominate the system and can be focused on individually. Though we will not restrict our analysis solely to them, the most important term is the Zeeman\index{spin Hamiltonian!Zeeman contribution} interaction energy. For the high-field limit that we will be working with, the Zeeman\index{spin Hamiltonian!Zeeman contribution} interaction dominates all other perturbations. This effects the system by splitting energy levels linearly with increasing magnetic field. Though there are a few other constants involved in the calculation of the Zeeman\index{spin Hamiltonian!Zeeman contribution} Hamiltonian, the main parameter it requires is the all-important g-tensor. This factor simplifies to a factor for symmetric lattice conditions and it relates the spreading of the differing spin energy levels to the magnetic field. It is ultimately through this Zeeman\index{spin Hamiltonian!Zeeman contribution} effect that we are able to see resonant conditions between magnetic field strength and microwave frequency.
 
 \begin{figure}
     \caption[Example of spin-hamiltonion fields]{\label{fig:HamFields}
@@ -305,22 +289,6 @@ Though it is not readily apparent, SiC\index{silicon carbide (4H SiC)} also exhi
      The representation of the known parameters included in the \textit{EasySpin\index{EasySpin}} struct definition for analysis of 4H-SiC\index{silicon carbide (4H SiC)}}
  \end{figure}
  
-\subsection{Thin-Film CdTe\index{cadmium telluride (CdTe)}}
-
-[Rough - More] The other material of interest studied in this work is CdTe\index{cadmium telluride (CdTe)}. (Writer's comment: honestly, I may just take anything related to CdTe\index{cadmium telluride (CdTe)} out of my thesis. I don't really have that much information on it to produce good plots.)
-
-[Rough - more] This system exhibits a dominating Cd interstitial defect\index{lattice-defects} (I think. I should look that one up) which contributes a spin-1/2 term to the Hamiltonian\index{spin Hamiltonian}.
-
-[Rough - more] The crystal structure of CdTe\index{cadmium telluride (CdTe)} is (I'll have to look this up) and thus the g-factor included in the Hamiltonian\index{spin Hamiltonian} is (again, i have to look this up).
-
-[Rough - more] I have included the pertinent code to represent this system in terms of the aforementioned \textit{EasySpin\index{EasySpin}} struct definition in figure \ref{fig:CdTeParams}.
-
-\begin{figure}
-    \caption[The \textit{EasySpin\index{EasySpin}} representation of CdTe\index{cadmium telluride (CdTe)}]{\label{fig:CdTeParams}
-     The representation of the known parameters included in the \textit{EasySpin\index{EasySpin}} struct definition for analysis of thin-film CdTe\index{cadmium telluride (CdTe)}.}
- \end{figure}
- 
-%\section{Encountered Challenges}
 
 
 
@@ -333,7 +301,7 @@ Though it is not readily apparent, SiC\index{silicon carbide (4H SiC)} also exhi
 
 \chapter{Experimental Methods}
 
-The work done for this thesis uses both computational and experimental components in describing ESR. Whereas we described the process of theoretical/computational ESR in the last chapter, we will now describe the experimental-limit of this technique which we call ODMR due to it's optical-coupling of information gathering. This chapter is primarily concerned with detailing the experimental methods implemented in typical ODMR setups. We will also first begin with a qualitative description of the materials we studied (SiC and CdTe).
+The work done for this thesis uses both computational and experimental components in describing ESR. Whereas we described the process of theoretical/computational ESR in the last chapter, we will now describe the experimental-limit of this technique which we call ODMR due to it's optical-coupling of information gathering. This chapter is primarily concerned with detailing the experimental methods implemented in typical ODMR setups. We will also first begin with a qualitative description of the material we studied (SiC).
 
 \section{Sample Preparation}
 
@@ -349,24 +317,13 @@ A higher irradiation fluence typically produces a higher concentration of defect
      Depth-dependent photoluminescence of the $10^{12}$ $\text{cm}^{−2}$ sample at the V2 wavelength. The large peak at 34 $\mu$m indicates the stopping position of the protons. The spatial resolution was 1 $\mu$m.}
  \end{figure}
 
-\subsection{Preparation of Cadmium Telluride Samples}
+\subsection{Photoluminescence Data}
 
-Like the silicon carbide\index{silicon carbide (4H SiC)}, three different varieties of CdTe\index{cadmium telluride (CdTe)} were prepared for the purpose of our optical study. One was CSS (Caustic Soda Solution) deposited, and two were formed using solution deposition CdTe\index{cadmium telluride (CdTe)} by our collaborator Dr. Mike Scarpulla of the University of Utah. All three samples were produced as a p-type semiconductor and contain vacancy defects\index{lattice-defects} in the crystal-lattice formed through a type of arsenic doping that has been predicted to yield superior results over current techniques commonly used.  
-
-All samples were quite aged and required special surface preparation upon arrival in our lab and did not display adequate photoluminescence intensity due to age-acquired surface recombination velocity. This was reduced using the procedure discussed in \ref{NULL} right before the measurements were taken. refer to \ref{NULL} for the full description of what procedures were used to prep the sample's surface.
-
-\subsection{Photoluminescence data}
-
-As mentioned earlier, ODMR\index{Optically Detected Magnetic Resonance (ODMR)} is a particular type of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. The major difference is that ODMR\index{Optically Detected Magnetic Resonance (ODMR)} uses a double-resonance technique to collect ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} data. Because of this, samples had to exhibit adequate resonance in their photoluminescence in order for the absorption of the microwave frequencies to be measured by our detectors. Figures \ref{fig:SiCPL} and \ref{fig:CdTePL} show the photoluminescence spectra of SiC\index{silicon carbide (4H SiC)} and CdTe\index{cadmium telluride (CdTe)} with the pertinent peaks of interest highlighted.
+As mentioned earlier, ODMR\index{Optically Detected Magnetic Resonance (ODMR)} is a particular type of ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. The major difference is that ODMR\index{Optically Detected Magnetic Resonance (ODMR)} uses a double-resonance technique to collect ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} data. Because of this, samples had to exhibit adequate resonance in their photoluminescence in order for the absorption of the microwave frequencies to be measured by our detectors. Figure \ref{fig:SiCPL} shows the photoluminescence spectra of SiC\index{silicon carbide (4H SiC)} with the pertinent peaks of interest highlighted.
 
 \begin{figure}
     \caption[Photoluminence Spectra of Silicon Carbide]{\label{fig:SiCPL}
       Photoluminence plot showing PL strength vs. wavelength in SiC\index{silicon carbide (4H SiC)}. The peak near 915 nm is the primary peak of interest as it represents the V2 silicon vacancy defect\index{lattice-defects}.}
- \end{figure}
- 
-\begin{figure}
-    \caption[Photoluminence Spectra of Cadmium Telluride]{\label{fig:CdTePL}
-     Photoluminence plot showing PL strength vs. wavelength of CdTe\index{cadmium telluride (CdTe)}.}
  \end{figure}
 
 \section{Experiment Background}
@@ -417,7 +374,7 @@ The overall program accepts as input a range of microwave frequencies and then r
 
 \chapter{Results}
 
-This chapter presents the ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectrums for SiC and CdTe for both computational and experimental methods. The results of these two methods are then compared and contrasted and their strengths analyzed.
+This chapter presents the ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} spectrum of SiC for both computational and experimental methods. The results of these two methods are then compared and contrasted and their strengths analyzed.
 
 \section{Computational Predictions}
 
@@ -425,11 +382,6 @@ Using computational methods via spin-Hamiltonian analysis with \textit{EasySpin}
 
 \begin{figure}
     \caption[ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} computational model for SiC\index{silicon carbide (4H SiC)}]{\label{fig:SiCModel}
-     This is the figure description.}
- \end{figure}
-
-\begin{figure}
-    \caption[ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} computational model for CdTe\index{cadmium telluride (CdTe)}]{\label{fig:CdTeModel}
      This is the figure description.}
  \end{figure}
 
@@ -442,12 +394,6 @@ We successfully collected data showing the ODMR\index{Optically Detected Magneti
      This is the figure description.}
  \end{figure}
 
-\begin{figure}
-    \caption[Experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)} for CdTe\index{cadmium telluride (CdTe)}]{\label{fig:CdTeResults}
-     This is the figure description.}
- \end{figure}
-
-
 \section{Data Analysis}
 
 The main expectation of the two different ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} methods is that they will produce spectral peaks at the same resonant microwave/magnetic field pairings. Moreover, it is also expected that the relative heights of each peak is the same when compared between plots. The data presented in the previous sections corroborate this condition. However, there is still is some differences between the two different methods. For one thing, the experimental ODMR\index{Optically Detected Magnetic Resonance (ODMR)} shows a higher noise-floor than the computational method. It's easier to predict cleaner spectrums when the only uncertainty is that of machine precision and not environmental effects.
@@ -456,60 +402,9 @@ Moreover, It is expected (and actually acceptable) that there will be some varia
 
 \section{Conclusion}
 
-The primary conclusion of this thesis regards the equivalency between computational and experimental ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. Though there are some differences between the two methods, the results show that computational ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions match experimental results to the same extent that the underlying Hamiltonian for that particular system is understood. Furthermore, there will always be some ambiguity between ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results and predictions due to practical considerations such as noise and ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} line-widths. Overall however, computational methods are good approximations of actual ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} results.
+The primary conclusion of this thesis regards the equivalency between computational and experimental ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}. Though there are some differences between the two methods, the results show that computational ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} predictions match experimental results to the same extent that the underlying Hamiltonian for that particular system is understood. In other words: the level of precision that computational modelling can present is restricted by how much information is known about the Hamiltonian\index{spin Hamiltonian} for that given system. Furthermore, there will always be some ambiguity between ODMR\index{Optically Detected Magnetic Resonance (ODMR)} results and predictions due to practical considerations such as noise and ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} line-widths. Overall however, computational methods are good approximations of actual ESR\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)}\index{Electron Spin Resonance (ESR)}\index{Electron Paramagnetic Resonance (EPR)} results.
 
-\begin{appendices}
-
-
-
-
-
-
-
-
-
-
-
-\chapter{Electron Spin Studies of Electron Irradiated SiC\index{silicon carbide (4H SiC)}}
-\label{chpt:AppendA}
-
-\begin{figure}
-    \caption[Electron-irradiated SiC\index{silicon carbide (4H SiC)} lifetime  summary]{\label{fig:e17results}
-     This is the figure description.}
- \end{figure}
-
-\begin{figure}
-    \caption[ODMR\index{Optically Detected Magnetic Resonance (ODMR)}/Photoluminescence vs temperature]{\label{fig:ODMRPL}
-     This is the figure description.}
- \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-\chapter{Optical Studies of Cadmium Telluride}
-\label{chpt:AppendB}
-
-
-
-
-
-
-
-
-
-\chapter{Electron Spin Coherence of Silicon Vacancies in Proton-Irradiated 4H-SiC\index{silicon carbide (4H SiC)}}
-\label{chpt:AppendC}
-
-\end{appendices}
-
-word
+Citations
 \cite{RefWorks:doc:58929816e4b0499fa95c51a6}
 \cite{RefWorks:doc:58929629e4b0d4c09201f6b8}
 \cite{RefWorks:doc:589299f4e4b0d4c09201f915}
@@ -535,13 +430,6 @@ word
 \cite{RefWorks:doc:5892964ee4b0499fa95c5108}
 \cite{RefWorks:doc:58929c15e4b0228a29292c58}
 \cite{RefWorks:doc:5892912ae4b0228a292928aa}
-
-\begin{figure}
-    \centerline{\includegraphics{Graphic1}}
-    \caption[Setup for using counter-propagating light]{\label{fig:MirrorDiagram}
-     A mirror with a hole is used to extract high-order harmonics generated in
-     counter-propagating laser beams.}
-\end{figure}
 
 \begin{figure}
     \caption[SiC\index{silicon carbide (4H SiC)} energy levels and zero-field splitting]{\label{fig:SiCZeeman}
